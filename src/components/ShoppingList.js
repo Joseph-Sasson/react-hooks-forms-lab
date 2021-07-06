@@ -21,12 +21,6 @@ function ShoppingList({ items }) {
     setSearch(e.target.value)
   }
 
-  const newSearch = items.filter((item) => {
-    if (search === "All") return true;
-
-    return item.category === search;
-  });
-
   return (
     <div className="ShoppingList">
       <ItemForm />
