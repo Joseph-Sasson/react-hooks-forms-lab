@@ -1,9 +1,9 @@
 import React from "react";
 import { v4 as uuid } from "uuid";
 
-function ItemForm(props) {
+function ItemForm(onItemFormSubmit) {
   return (
-    <form className="NewItem">
+    <form className="NewItem" onSubmit={onItemFormSubmit}>
       <label>
         Name:
         <input type="text" name="name" />
@@ -12,9 +12,9 @@ function ItemForm(props) {
       <label>
         Category:
         <select name="category">
-          <option value="Produce">Produce</option>
-          <option value="Dairy">Dairy</option>
-          <option value="Dessert">Dessert</option>
+          <option value="Produce" name='produce'>Produce</option>
+          <option value="Dairy" name='dairy'>Dairy</option>
+          <option value="Dessert" name='dessert'>Dessert</option>
         </select>
       </label>
 
